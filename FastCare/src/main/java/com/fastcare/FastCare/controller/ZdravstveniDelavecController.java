@@ -11,7 +11,7 @@ import com.fastcare.FastCare.repository.ZdravstveniDelavecRepository;
 import com.fastcare.FastCare.vao.ZdravstveniDelavec;
 
 @RestController
-
+@RequestMapping("/zdravstvenidelavci")
 public class ZdravstveniDelavecController {
 	private static final Logger log = Logger.getLogger(ZdravstveniDelavecController.class.toString());
 	
@@ -28,6 +28,7 @@ public class ZdravstveniDelavecController {
 		log.info("Get osebe z id: " + id);
 		return zdravstveniDelavecRepository.findById(id).get();
 	}
+
 	
 	@PostMapping
 	public ZdravstveniDelavec postZdravstveniDelavec(@RequestBody ZdravstveniDelavec zdravstveniDelavec) {
