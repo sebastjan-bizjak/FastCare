@@ -1,1 +1,2 @@
-baza 1 
+baza 1
+baza 2
