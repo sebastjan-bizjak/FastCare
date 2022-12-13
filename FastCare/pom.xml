@@ -8,11 +8,11 @@
 		<version>3.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.fastcare</groupId>
+	<groupId>com.test</groupId>
 	<artifactId>FastCare</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>FastCare</name>
-	<description>RIS projekt - Ekipa 16</description>
+	<name>Testiranje</name>
+	<description>Test project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
