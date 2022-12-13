@@ -33,7 +33,7 @@ public class ZdravstveniDelavecController {
         zdravstveniDelavecService.addNewZdravstveniDelavec(zdravstveniDelavec);
     }
 
-    @PutMapping(path = "/get/{id_zd}")
+    @PutMapping(path = "/put/{id_zd}")
     public ZdravstveniDelavec posodobiZdravstvenegaDelavca(@PathVariable("id_zd") long id_zd, @RequestBody ZdravstveniDelavec zdravstveniDelavec) {
         return zdravstveniDelavecService.posodobiZdravstvenegaDelavca(id_zd, zdravstveniDelavec);
     }
@@ -41,7 +41,7 @@ public class ZdravstveniDelavecController {
         zdravstveniDelavecService.updateZdravstveniDelavec(id_zd, ime, urgenca);
     }*/
 
-    @DeleteMapping(path = "/get/{id_zd}")
+    @DeleteMapping(path = "/delete/{id_zd}")
     public void brisiZdravstvenegaDelavca(@PathVariable("id_zd") long id_zd) {
         zdravstveniDelavecService.deleteZdravstveniDelavec(id_zd);
     }

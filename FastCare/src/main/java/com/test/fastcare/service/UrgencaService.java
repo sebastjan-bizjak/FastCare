@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class UrgencaService {
     private final UrgencaRepository urgencaRepository;
@@ -15,11 +17,24 @@ public class UrgencaService {
         this.urgencaRepository = opremaRepository;
     }
 
+    public Optional<Urgenca> getid_urgenca(long id_urgenca) {
+        return UrgencaRepository.findById(id_urgenca);
+    }
+
     public List<Urgenca> getAll() {
         return urgencaRepository.findAll();
     }
 
-    public void addNewOprema(Urgenca urgenca) {
+    public void addNewUrgenca(Urgenca urgenca) {
         urgencaRepository.save(urgenca);
+    }
+
+    public void deleteUrgenca(long id_urgenca) {
+        UrgencaRepository.deleteById(id_urgenca);
+    }
+
+    public Urgenca posodobiUrgenco(long urgenca_id, Urgenca urgenca) {
+        urgenca.setId_urgenca(urgenca_id);
+        return UrgencaRepository.save(urgenca);
     }
 }

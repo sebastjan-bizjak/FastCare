@@ -10,18 +10,19 @@ public class Urgenca {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private int id_urgenca;
+    private long id_urgenca;
     private String nazivUrgence;
     private String naslovUrgence;
     private String sobe;
     private String oddelki;
     private String delavci;
 
-    public int getId_urgenca() {
+    public long getId_urgenca() {
         return id_urgenca;
     }
 
-    public void setId_urgenca(int id_urgenca) {
+
+    public void setId_urgenca(long id_urgenca) {
         this.id_urgenca = id_urgenca;
     }
 
