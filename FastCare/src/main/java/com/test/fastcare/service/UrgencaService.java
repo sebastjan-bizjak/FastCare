@@ -18,7 +18,7 @@ public class UrgencaService {
     }
 
     public Optional<Urgenca> getid_urgenca(long id_urgenca) {
-        return UrgencaRepository.findById(id_urgenca);
+        return urgencaRepository.findById(id_urgenca);
     }
 
     public List<Urgenca> getAll() {
@@ -30,11 +30,11 @@ public class UrgencaService {
     }
 
     public void deleteUrgenca(long id_urgenca) {
-        UrgencaRepository.deleteById(id_urgenca);
+        urgencaRepository.deleteById(id_urgenca);
     }
 
     public Urgenca posodobiUrgenco(long urgenca_id, Urgenca urgenca) {
         urgenca.setId_urgenca(urgenca_id);
-        return UrgencaRepository.save(urgenca);
+        return urgencaRepository.save(urgenca);
     }
 }
