@@ -17,6 +17,15 @@ public class Urgenca {
     private String oddelki;
     private String delavci;
 
+    public Urgenca(){
+
+        this("", "");
+
+    }
+    public Urgenca(String nazivUrgence, String naslovUrgence){
+
+    }
+
     public long getId_urgenca() {
         return id_urgenca;
     }
