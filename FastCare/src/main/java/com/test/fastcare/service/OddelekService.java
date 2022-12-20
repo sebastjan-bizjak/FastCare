@@ -19,7 +19,7 @@ public class OddelekService {
         return OddelekRepository.findAll();
     }
 
-    public void addNewoddelek(Oddelek Oddelek) {
-        OddelekRepository.save(Oddelek);
+    public void addNewoddelek(Oddelek oddelek) {
+        OddelekRepository.save(oddelek);
     }
 }

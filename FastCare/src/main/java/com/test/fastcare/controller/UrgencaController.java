@@ -28,7 +28,7 @@ public class UrgencaController {
 
         @GetMapping(path ="/get/{id_urgenca}")
         public Optional<Urgenca> getid_urgenca(@PathVariable("id_urgenca") long id_urgenca) {
-            return UrgencaService.getid_urgenca(id_urgenca);
+            return urgencaService.getid_urgenca(id_urgenca);
         }
 
         @PostMapping(path = "/dodajUrgenca")
@@ -38,12 +38,12 @@ public class UrgencaController {
 
         @DeleteMapping(path = "/delete/{id_urgenca}")
         public void brisiUrgenco(@PathVariable("id_urgenca") long id_urgenca) {
-            UrgencaService.deleteUrgenca(id_urgenca);
+            urgencaService.deleteUrgenca(id_urgenca);
         }
 
         @PutMapping(path = "/put/{id_urgenca}")
-        public Urgenca posodobiUrgenco(@PathVariable("id_zd") long id_urgenca, @RequestBody Urgenca urgenca) {
-            return UrgencaService.posodobiUrgenco(id_urgenca, urgenca);
+        public Urgenca posodobiUrgenco(@PathVariable("id_urgenca") long id_urgenca, @RequestBody Urgenca urgenca) {
+            return urgencaService.posodobiUrgenco(id_urgenca, urgenca);
         }
 
 }
