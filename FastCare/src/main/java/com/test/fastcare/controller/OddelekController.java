@@ -18,6 +18,7 @@ public class OddelekController {
     @Autowired
     private final OddelekService oddelekService;
     private OddelekRepository oddelekRepository;
+
     public OddelekController(OddelekService oddelekService, OddelekRepository oddelekRepository) {
         this.oddelekService = oddelekService;
         this.oddelekRepository = oddelekRepository;
@@ -34,7 +35,7 @@ public class OddelekController {
     }
 
     @GetMapping("/oddelek-2parm/{ImeOdd},{namen}")
-    public Iterable<Oddelek> vrniOddelekpoNamenuImenu(@PathVariable String ImeOdd, @PathVariable String namen){
-        return  oddelekRepository.vrniOddelekpoNamenuImenu(ImeOdd, namen);
+    public Iterable<Oddelek> vrniOddelekpoNamenuImenu(@PathVariable String ImeOdd, @PathVariable String namen) {
+        return oddelekRepository.vrniOddelekpoNamenuImenu(ImeOdd, namen);
     }
 }

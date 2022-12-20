@@ -15,7 +15,6 @@ public class Oddelek {
     private String namen;
 
     public Oddelek() {
-        this("", "");
 
     }
 

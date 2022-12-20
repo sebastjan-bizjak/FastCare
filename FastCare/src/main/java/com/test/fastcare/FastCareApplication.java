@@ -10,4 +10,4 @@ public class FastCareApplication {
 		SpringApplication.run(FastCareApplication.class, args);
 	}
 
-} 
+}
