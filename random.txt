@@ -1,3 +1,4 @@
 baza 1
 baza 2
-razvrstitev razredov  
+razvrstitev razredov
+kompleksnejsa poizvedba
