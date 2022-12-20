@@ -10,7 +10,7 @@ public class Oprema {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private int id_oprema;
+    private long id_oprema;
     private String nazivOpreme;
     private String tipOpreme;
     private String namenOpreme;
@@ -21,17 +21,17 @@ public class Oprema {
     }
 
     public Oprema(String nazivOpreme, String tipOpreme, String namenOpreme, int tipZD) {
-        this.namenOpreme = namenOpreme;
+        this.nazivOpreme = nazivOpreme;
         this.tipOpreme = tipOpreme;
         this.namenOpreme = namenOpreme;
         this.tipZD = tipZD;
     }
 
-    public int getId_oprema() {
+    public long getId_oprema() {
         return id_oprema;
     }
 
-    public void setId_oprema(int id_oprema) {
+    public void setId_oprema(long id_oprema) {
         this.id_oprema = id_oprema;
     }
 
